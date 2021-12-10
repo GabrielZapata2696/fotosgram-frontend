@@ -34,7 +34,6 @@ export class Tab1Page implements OnInit {
 
     this.postsService.getPosts(pull).subscribe(resp => {
       this.posts.push(...resp.post);
-      console.log(resp)
 
       if (event) {
         event.target.complete();

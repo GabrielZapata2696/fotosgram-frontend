@@ -14,45 +14,6 @@ export class LoginPage implements OnInit {
 
   @ViewChild('slidePrincipal', { static: true }) slides: IonSlides;
 
-  avatars = [
-    {
-      img: 'av-1.png',
-      seleccionado: true
-    },
-    {
-      img: 'av-2.png',
-      seleccionado: false
-    },
-    {
-      img: 'av-3.png',
-      seleccionado: false
-    },
-    {
-      img: 'av-4.png',
-      seleccionado: false
-    },
-    {
-      img: 'av-5.png',
-      seleccionado: false
-    },
-    {
-      img: 'av-6.png',
-      seleccionado: false
-    },
-    {
-      img: 'av-7.png',
-      seleccionado: false
-    },
-    {
-      img: 'av-8.png',
-      seleccionado: false
-    },
-  ];
-
-
-  avatarSlide = {
-    slidesPerView: 3.5
-  };
 
   loginUser = {
     email: 'sr.gabrielzm@gmail.com',
@@ -65,6 +26,8 @@ export class LoginPage implements OnInit {
     nombre: 'Test 5',
     avatar: 'av-1.png'
   };
+
+
   constructor(
     private usuarioService: UsuarioService,
     private navCtrl: NavController,
@@ -85,6 +48,7 @@ export class LoginPage implements OnInit {
       this.navCtrl.navigateRoot('main/tabs/tab1', { animated: true });
     } else {
       this.uiService.alertaInformativa('Usuario/Contraseña no son correctos.');
+      return;
     }
 
   }
@@ -103,12 +67,6 @@ export class LoginPage implements OnInit {
 
   }
 
-  seleccionarAvatar(avatar: any) {
-    this.avatars.forEach(av => {
-      av.seleccionado = false;
-    });
-    avatar.seleccionado = true;
-  }
 
   mostrarInicio() {
     this.slides.lockSwipes(false);
