@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">fotosgram</string>
+    <string name="title_activity_main">fotosgram</string>
+    <string name="package_name">com.gabrielzapata.fotosgram</string>
+    <string name="custom_url_scheme">com.gabrielzapata.fotosgram</string>
+</resources>

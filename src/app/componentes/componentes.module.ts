@@ -6,6 +6,7 @@ import { IonicModule } from '@ionic/angular';
 import { DomSanitizerPipe } from '../pipes/dom-sanitizer.pipe';
 import { PipesModule } from '../pipes/pipes.module';
 import { AvatarSelectorComponent } from './avatar-selector/avatar-selector.component';
+import { MapaComponent } from './mapa/mapa.component';
 
 
 
@@ -13,11 +14,12 @@ import { AvatarSelectorComponent } from './avatar-selector/avatar-selector.compo
   declarations: [
     PostComponent,
     PostsComponent,
-    AvatarSelectorComponent
+    AvatarSelectorComponent,
+    MapaComponent
   ],
   exports: [
     PostsComponent,
-    AvatarSelectorComponent
+    AvatarSelectorComponent,
 
   ],
   imports: [
